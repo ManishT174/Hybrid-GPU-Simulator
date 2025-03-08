@@ -1,0 +1,70 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 proj_structure\
+gpu-simulator/\
+\uc0\u9500 \u9472 \u9472  rtl/                        # SystemVerilog RTL implementations\
+\uc0\u9474    \u9500 \u9472 \u9472  core/                   # Core GPU components\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  warp_scheduler.sv   # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  execution_unit.sv   # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  memory_controller.sv # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  register_file.sv    # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  instruction_decoder.sv # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  shared_memory.sv    # \u10060  Not implemented\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  atomic_unit.sv      # \u10060  Not implemented\
+\uc0\u9474    \u9500 \u9472 \u9472  interfaces/             # Interface definitions\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  mem_if.sv          # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  exec_if.sv         # \u9989  Implemented\
+\uc0\u9474    \u9492 \u9472 \u9472  top/                    # Top-level RTL\
+\uc0\u9474        \u9492 \u9472 \u9472  gpu_top.sv         # \u9989  Implemented\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  src/                        # C++ source files\
+\uc0\u9474    \u9500 \u9472 \u9472  simulator/             # High-level simulator components\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  sim_engine.cpp     # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  sim_engine.h       # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  memory_model.cpp   # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  memory_model.h     # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  program_loader.cpp # \u9989  Implemented\
+\uc0\u9474    \u9500 \u9472 \u9472  dpi/                   # DPI-C interface layer\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  dpi_wrapper.cpp    # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  dpi_wrapper.h      # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  dpi_types.h        # \u9989  Implemented\
+\uc0\u9474    \u9492 \u9472 \u9472  utils/                 # Utility functions\
+\uc0\u9474        \u9500 \u9472 \u9472  logger.cpp         # \u9989  Implemented\
+\uc0\u9474        \u9500 \u9472 \u9472  logger.h           # \u9989  Implemented\
+\uc0\u9474        \u9492 \u9472 \u9472  utils.h            # \u9989  Implemented\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  tb/                        # Testbench files\
+\uc0\u9474    \u9500 \u9472 \u9472  rtl_tb/               # RTL-level testbenches\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  tb_warp_scheduler.sv    # \u10060  Not implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  tb_execution_unit.sv    # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  tb_memory_controller.sv # \u9989  Implemented\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  tb_register_file.sv     # \u10060  Not implemented\
+\uc0\u9474    \u9492 \u9472 \u9472  system_tb/            # System-level tests\
+\uc0\u9474        \u9500 \u9472 \u9472  tb_gpu_top.sv      # \u9989  Implemented\
+\uc0\u9474        \u9492 \u9472 \u9472  test_cases/        # \u10060  Not implemented\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  programs/                  # Test programs\
+\uc0\u9474    \u9500 \u9472 \u9472  alu_test.asm          # \u10060  Not implemented\
+\uc0\u9474    \u9500 \u9472 \u9472  memory_test.asm       # \u10060  Not implemented\
+\uc0\u9474    \u9500 \u9472 \u9472  branch_test.asm       # \u10060  Not implemented\
+\uc0\u9474    \u9492 \u9472 \u9472  examples/             # Example applications\
+\uc0\u9474        \u9500 \u9472 \u9472  vector_add.asm    # \u10060  Not implemented\
+\uc0\u9474        \u9492 \u9472 \u9472  matrix_mul.asm    # \u10060  Not implemented\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  scripts/                   # Build and simulation scripts\
+\uc0\u9474    \u9500 \u9472 \u9472  build.sh              # \u9989  Implemented\
+\uc0\u9474    \u9500 \u9472 \u9472  run_sim.sh            # \u9989  Implemented\
+\uc0\u9474    \u9492 \u9472 \u9472  compile.sh            # \u9989  Implemented\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  docs/                      # Documentation\
+\uc0\u9474    \u9500 \u9472 \u9472  architecture.md       # \u10060  Not implemented\
+\uc0\u9474    \u9500 \u9472 \u9472  user_guide.md         # \u10060  Not implemented\
+\uc0\u9474    \u9492 \u9472 \u9472  instruction_set.md    # \u10060  Not implemented\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  CMakeLists.txt            # \u9989  Implemented\
+\uc0\u9492 \u9472 \u9472  Makefile                  # \u9989  Implemented}
